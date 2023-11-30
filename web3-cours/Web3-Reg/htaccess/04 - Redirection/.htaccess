@@ -1,0 +1,2 @@
+# Redirection permanente (temporaire = 302)
+Redirect 301 /mes-services.html /services.php

@@ -1,0 +1,17 @@
+{
+    "name": "ftheriault/htdocs8082",
+    "autoload": {
+        "psr-4": {
+            "Ftheriault\\Htdocs8082\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Frédéric Thériault",
+            "email": "fred.theriault@gmail.com"
+        }
+    ],
+    "require": {
+        "fpdf/fpdf": "^1.86"
+    }
+}

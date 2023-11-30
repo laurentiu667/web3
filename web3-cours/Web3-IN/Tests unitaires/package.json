@@ -1,0 +1,14 @@
+{
+  "name": "game-database",
+  "version": "1.0.0",
+  "description": "Unit testing app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Frederic Theriault",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
+}
