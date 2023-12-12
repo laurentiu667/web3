@@ -1,0 +1,11 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+#container {
+	margin:10px auto;
+	border:1px solid black;
+	width:960px;
+	height:540px;
+}

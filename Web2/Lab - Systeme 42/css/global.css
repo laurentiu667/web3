@@ -1,0 +1,87 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+@keyframes liveBackground {
+    0%   { background-color: #000; }
+    25%  { background-color: #300; }
+    75%  { background-color: #003; }
+    100% { background-color: #000; }
+  }
+
+html {
+    font-family: Arial, Helvetica, sans-serif;   
+    font-size: 16px;
+    animation-name: liveBackground;
+    animation-fill-mode: both;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+}
+
+h1 {
+    color:white;
+    background-color: darkmagenta;
+    padding:10px;
+}
+
+.box {
+    width:500px;
+    background-color: honeydew;
+}
+
+.box-content {
+    padding:20px;
+}
+
+.box-content > div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.box-content div div:first-child {
+    flex-basis: 200px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.box-content div input {
+    padding:1px;
+    width: 200px;
+}
+
+.box-content div select {
+    width: 50px;
+}
+
+.box-content div textarea {
+    font-family: Arial, Helvetica, sans-serif;   
+    width:100%;
+    height:60px;
+    padding:5px;
+}
+
+.box-content div label {
+    display: block;
+}
+
+.box-content div input[type="radio"] {
+    width:auto;
+}
+
+.box-content div button {
+    display: block;
+    margin: 5px auto 0 auto;
+    background-color: darkmagenta;
+    border:0 solid white;
+    padding:10px;
+    color:white;
+    font-weight: bold;
+    font-size: 1em;
+}

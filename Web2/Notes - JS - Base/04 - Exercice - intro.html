@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Exercice - math</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			let data = [];
+
+			for (let i = 0; i < 20; i++) {
+				data.push(Math.floor(Math.random() * 101));
+			}
+
+			// Partie 1
+			// Faire une boucle d'insertion de 20 valeurs numériques aléatoires dans la variable data
+			// Les valeurs doivent être entre 0 et 100 (entières)
+						
+			let sum = 0;
+			let min = data[0];
+			let max = data[0];
+			let avg = null;
+
+			data.forEach(num => {
+				sum += num;
+
+				if (min > num) {
+					min = num;
+				}
+
+				if (max < num) {
+					max = num;
+				}
+			})
+
+			avg = sum/data.length;
+
+			// Partie 2
+			// Boucler sur le tableau afin d'en extraire : 
+			// la valeur minimale (min), maximale (max), la moyenne (avg) et la somme (sum)
+			
+			console.log(data);
+			console.log("Rapport d'analyse du tableau ", data);
+			console.log("La somme est : " + sum);
+			console.log("La valeur minimale est : " + min);
+			console.log("La valeur maximale est : " + max);
+			console.log("La moyenne est : " + avg);			
+			
+		</script>
+	</body>
+</html>

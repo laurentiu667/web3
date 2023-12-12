@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Ajouter au début - innerHTML</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			const ajouter = () => {
+				let texte = prompt("Ajouter un stéréotype");
+				let parentNode = document.querySelector("ul");
+
+				parentNode.innerHTML = "<li style='color:red'>" + texte + "</li>" + parentNode.innerHTML;
+			}
+		</script>
+		
+		<div id="small-container">
+			<h3>Stéréotype informaticien (innerHTML)</h3>
+			<ul id="liste">
+				<li>Aimer le badminton</li>
+				<li>Faire du vélo</li>
+				<li>Amateur de cinéma</li>
+			</ul>
+			<div class="small-section">
+				[ <a href="javascript:void(0)" onclick="ajouter()">Ajouter</a> ]
+			</div>
+		</div>
+	</body>
+</html>

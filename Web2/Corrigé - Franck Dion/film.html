@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frank Dion - Film</title>
+        <link rel="stylesheet" href="css/global.css">
+		<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+        <script>
+            window.addEventListener("load", () => {
+				let videoNode = document.querySelector("video");
+                videoNode.onended = () => {
+                    window.location.href = "generique.html"
+                }
+
+                videoNode.onpause = () => {
+                    document.body.style.backgroundColor = "#555";
+                }
+
+                videoNode.onplay = () => {
+                    document.body.style.backgroundColor = "#fff";
+                }
+            })
+        </script>
+    </head>
+    <body>
+
+        <div class="video-container">
+            <video src="videos/film.mp4" controls></video>
+        </div>
+
+    </body>
+</html>

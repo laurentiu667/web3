@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Your Dream Trip</title>
+        <meta charset="utf-8" />
+		<link href="css/global.css" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/javascript.js"></script>
+	</head>
+	<body>
+		<div id="you-circle"></div>
+		<div id="you-arrow"></div>
+		<div id="you-text">Serez-vous le prochain ?</div>
+		
+		<div class="form-section">
+			<h1>Grand concours CVM : Voyagez dans l'espace</h1>
+			<p>Sky is the limit... hé bien plus maintenant. Participez au concours et courez la chance de gagner un voyage pour 2 à bord de la navette spatiale CVM. </p>
+			<p>Remplissez le formulaire suivant et croisez-vos doigts !</p>
+			<!-- 2 attributs obligatoires! -->
+			<form action="http://perdu.com" method="post">
+				<div class="question">
+					<h2>Quel est votre nom ?</h2>
+					<div>
+						<!-- input:text -->
+						<!-- value="Alexis" -->
+						<input type="text" name="nom" required placeholder="Renseigner ce champ" >
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Pourquoi voulez-vous aller dans l'espace ?</h2>
+					<div>
+						<textarea name="raisons" cols="1" rows="1" style="width:100%;min-height:70px">safasdfsdfsd</textarea>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quel est le mot de passe de votre compte banquaire ?</h2>
+					<div>
+						<input type="password" name="motDePasse">
+					</div>
+				</div>
+
+				<div class="question">
+					<h2>Quel est votre courriel ?</h2>
+					<div>
+						<input type="email" name="courriel">
+					</div>
+				</div>
+
+				<div class="question">
+					<h2>Quel est votre date de naissance ?</h2>
+					<div>
+						<input type="date" name="date">
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Aucune question ici...</h2>
+					<div>
+						<input type="hidden" name="cache">
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quelle est votre planète préférée ?</h2>
+					<div>
+						<select name="planete">
+							<option value="1">Mercure</option>
+							<option value="2">Venus</option>
+							<option value="3" selected>Terre</option>
+							<option value="4">Mars</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Que buvez-vous le matin?</h2>
+					<div>
+						<label>
+							<input type="radio" name="boisson">Café<br>
+						</label>
+						<label>
+							<input type="radio" name="boisson">Thé<br>
+						</label>
+						<label>
+							<input type="radio" name="boisson" checked>Bière
+						</label>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quels sont vos intérêts ?</h2>
+					<div>
+						<label>
+							<input type="checkbox" name="interets">Cinéma<br>
+						</label>
+						<label>
+							<input type="checkbox" name="interets">Gaming<br>
+						</label>
+						<label>
+							<input type="checkbox" name="interets" checked>Marche
+						</label>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Pour terminer, appuyez sur le bon bouton</h2>
+					<div>
+						<button type="submit">Envoyer</button>
+						<button type="reset">Vider!</button>
+						<button type="button" onclick="alert(1)">Boom</button>
+						<input type="image" src="images/arrow.png" alt="">
+						<!-- <input type="submit" value="">
+						<input type="reset" value=""> -->
+						(input : submit - reset - image - button)
+						(button : submit - button)
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

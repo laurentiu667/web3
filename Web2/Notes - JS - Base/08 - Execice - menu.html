@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercice - menu</title>
+    </head>
+    <body>
+        Voir la console (faire F12)
+
+        <script>
+            let timeList = []
+
+            const menu = () => {
+                console.log("======================");
+                console.log("-    MENU 101        =")
+                console.log("----------------------");
+                console.log("  a = Ajouter temps");
+                console.log("  l = Afficher temps");
+                console.log("  q = Quitter");
+            }
+
+            const addTime = () => {
+                let currentTime = new Date().toLocaleString();
+                timeList.push(currentTime);
+            }
+
+            const showTimes = () => {
+                timeList.forEach(element => {
+                    console.log(element);
+                })
+            }
+
+            let choix;
+            
+            while (choix != "q") {
+                menu();
+                choix = prompt("Choix : ");
+
+                if (choix == "a") {
+                    addTime();
+                }
+                else if (choix == "l") {
+                    showTimes();
+                }
+            }
+
+
+
+			// 1 : Faire afficher le menu
+			// 2 : Demander un choix à l'utilisateur via une boîte prompt
+			// 3 : Tant que le choix n'est pas "q", alors réafficher le menu et la boîte
+            //     (Faire un while autour du code des étapes 1 et 2)
+			// 4 : Dans le while, si le choix est "a", appeler la fonction addTime()
+            // 5 : Dans la function addTime(), ajouter "currentTime" dans le tableau "timeList".
+			// 6 : Dans le while, si le choix est "l", alors appeler la fonction showTimes()
+            // 7 : Dans la function showTimes(), afficher le contenu du tableau "timeList" via une boucle for ou forEach.
+
+        </script>
+    </body>
+</html>

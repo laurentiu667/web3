@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Analyse</title>
+        <meta charset="utf-8" />
+		<link href="css/global.css" rel="stylesheet" />
+		<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+		<script src="js/javascript.js"></script>
+	</head>
+	<body>
+		<div>
+			<main>
+				<div id="analyze-icon"></div>
+				<div id="analyze-result">
+					<h3>Resultat est 42</h3>
+				</div>
+			</main>
+			<div id="search-line">
+				<div>
+					<input type="text" name="searchBox" placeholder="Texte à analyser" />
+				</div>
+				<div class="btn">
+					<button id="analyze-btn">Analyser</button>
+				</div>
+			</div>
+		</div>
+        <footer>
+            <div>
+                <h3>Validation, fichier externe et délai</h3>
+                <p>L'objectif est de simuler un traitement compliqué suite à l'envoi du formulaire</p>
+                <p>Pour y parvenir:</p>
+                <ol>
+                    <li>
+                        Au départ, les <code>div#analyze-result</code> et <code>div#analyze-icon</code> doivent être cachés avec du css (display:none)
+                    </li>
+                    <li>
+                        Créer votre fichier js/javascript.js, et faites le lien (<code>&lt;script src="..."</code>) dans le fichier html.
+                    </li>
+                    <li>
+                        Dans votre fichier JavaScript, faire en sorte que lorsque la personne clique sur "Analyser", alors le <code>div#analyze-icon</code> est affiché pour 2 secondes. Il n'y a donc pas une vraie validation de formulaire. En fait, il n'y a même pas de balise <code>form</code>.
+					</li>
+					<li>Puis, faire en sorte qu'après les 2 secondes, le <code>div#analyze-icon</code> est caché et <code>div#analyze-result</code> apparaît.</li>
+                </ol>
+            </div>
+        </footer>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les fonctions</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			function afficher(texte) {
+				console.log("J'affiche : " + texte);
+			}	
+
+			afficher("salut!");
+			// afficher = 23;
+			// afficher("asdf");
+
+			const afficher2 = (texte) => {
+				console.log(texte);
+			}
+
+			// const afficher4 = () => {...}
+			const afficher3 = txt => {
+				console.log(txt);
+			}
+
+			afficher2("Heyyyyy");
+
+
+			const addition = (n1, n2) => {
+				return n1 + n2;
+			}
+			const addition2 = (n1, n2) => n1 + n2;
+
+			let total = addition(12, 234);
+			console.log(total);
+		</script>
+	</body>
+</html>

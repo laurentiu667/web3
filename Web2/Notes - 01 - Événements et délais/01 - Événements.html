@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les événements</title>
+		<meta charset="utf-8"/>
+		<style>
+			p {
+				border:1px solid #aaa;
+				margin-bottom:20px;
+				width: 200px;
+				padding:20px;
+			}
+		</style>
+		<script>
+			const sourisBouge = (evt) => {
+				console.log(evt.clientX)
+			}
+
+			const sourisALInterieur = interieur => {
+				console.log(interieur);
+			}
+
+			const possedeFocus = hasFocus => {
+				console.log(hasFocus);
+			}
+
+			const valeurModifiee = (node) => {
+				console.log(node.value)
+			}
+		</script>
+	</head>
+	<body>
+		<p onmousemove="sourisBouge(event)">Quand la souris bouge</p>
+		<p onmouseover="sourisALInterieur(true)" onmouseout="sourisALInterieur(false)">Quand la souris entre et sort</p>
+		<p onclick="console.log('allo')">Quand la souris a été cliquée</p>
+
+		<div>
+			<input type="text" name="dummy" onchange="valeurModifiee(this)" onkeyup="console.log(event.key)" onfocus="possedeFocus(true)" onblur="possedeFocus(false)" >
+		</div>
+	</body>
+</html>

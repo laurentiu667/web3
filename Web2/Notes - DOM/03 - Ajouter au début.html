@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Ajouter au début - DOM</title>
+		<link rel="stylesheet" href="css/global.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			const ajouter = () => {
+				let texte = prompt("Ajouter un stéréotype");
+				let node = document.createElement("li");
+				node.innerText = texte;
+
+				let parentNode = document.querySelector("ul");
+				parentNode.prepend(node);
+			}
+		</script>
+		
+		<div id="small-container">
+			<h3>Stéréotype informaticien (DOM)</h3>
+			<ul id="liste">
+				<li>Aimer le badminton</li>
+				<li>Faire du vélo</li>
+				<li>Amateur de cinéma</li>
+			</ul>
+			<div class="small-section">
+				[ <a href="javascript:void(0)" onclick="ajouter()">Ajouter</a> ]
+			</div>
+		</div>
+	</body>
+</html>

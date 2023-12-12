@@ -1,0 +1,14 @@
+main {
+    height:500px;
+    border:1px solid black;
+    position:relative;
+    overflow:hidden;
+}
+
+.monster {
+    position:absolute;
+    top:-50px;
+    width:48px;
+    height:48px;
+    background-image:url('../images/monster.png');
+}

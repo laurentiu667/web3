@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Validation de formulaire</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			const validate = () => {
+				let cityNode = document.getElementById("city");
+				let cityValue = cityNode.value;
+				let errors = [];
+
+				// si le champ est invalide
+				if (cityValue.length < 2) {
+				  errors.push("Ville trop courte");
+				}
+
+				// La ville ne doit pas avoir de 1 (un)
+				// if (!cityValue.match(/^[a-z\sA-Z]*$/))
+				if (cityValue.indexOf("1") >= 0) {
+					errors.push("La ville ne doit pas contenir de 1");
+				}
+
+				if (errors.length > 0) {
+					let message = "Vous avez des erreurs : ";
+
+					errors.forEach(err => {
+						message += "\n - " + err;
+					});
+
+					cityNode.value = "";
+					alert(message);
+				}
+
+				return errors.length == 0;
+			}
+		</script>
+
+		<form action="" method="get" onsubmit="return validate()">
+			<input type="text" name="cityName" id="city" placeholder="Nom d'une ville">
+			<button type="submit">Rechercher</button>
+		</form>
+	</body>
+</html>

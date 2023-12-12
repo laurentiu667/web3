@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Noeud HTML</title>
+		<meta charset="utf-8"/>
+		<script>
+			const modifier = () => {
+				let nodes = document.querySelectorAll("div");
+				nodes.forEach(n => {
+					n.style.padding = "20px";
+				});
+				let node = document.querySelector("body > div");
+				let rnd = Math.random();
+
+				if (rnd < 0.5) {
+					node.style.color = "red";
+					node.style.backgroundColor = "blue";
+				}
+				else {
+					node.style.color = "green";
+					node.style.backgroundColor = "#ffffff";
+				}
+			}	
+		</script>
+	</head>
+	<body>
+		<div id="texte" onmousemove="modifier()">Lorem ipsum</div>
+	</body>
+</html>

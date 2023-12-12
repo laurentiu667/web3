@@ -1,0 +1,59 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+button {
+    padding:10px 20px;
+}
+
+.builder {
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 80px;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-bottom: 2px solid #444;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.space {
+    height: 100vh;
+    background-color: black;
+}
+
+.star {
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0 0 10vh white;
+    margin-left:-0.5vh !important;
+    margin-top:-0.5vh !important;
+    height: 1vh !important;
+    width: 1vh !important;
+}
+
+.ui-comp {
+    position: absolute;
+    margin-left:-10vw;
+    margin-top:-10vh;
+    height: 10vh;
+    width: 10vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.sun {
+    z-index: 0;
+    left:50vw;
+    top:50vh;
+    margin-left:-15vw;
+    margin-top:-15vh;
+    background-image: url('../img/sun.png');
+    width: 30vw;
+    height: 30vh;
+}

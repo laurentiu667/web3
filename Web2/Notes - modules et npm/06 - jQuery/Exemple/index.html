@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <head>
+        <title>jQuery example</title> 
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>        
+        <link href="css/global.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+		
+    	<div id="example1" class="exampleSection">
+    		<div>
+    			Exemple 1 : <a href="javascript:void(0)" onclick="toggleTexte()">Toggle texte</a>
+    		</div>
+    		<div id="texteCache" style="display:none;padding-top:20px;">
+    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+    			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+    			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+    			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    		</div>
+    	</div>
+    	
+    	<div id="example2" class="exampleSection">
+    		<div>
+    			Exemple 2 :
+    			<div>
+    			
+	    			<div id="menu" onmouseover="afficherMenu()" onmouseout="outSubMenu()" class="menuSection">
+	    				<div style="border:1px solid blue;width:100px; text-align:center;">
+	    					Menu
+	    				</div>
+		    			<ul style="display:none;list-style-type:none">
+			    			<li><div style="border:1px solid #bbbbbb" onmouseover="inSubMenu()" onmouseout="outSubMenu()">Accueil</div></li>
+		    				<li><div style="border:1px solid #bbbbbb" onmouseover="inSubMenu()" onmouseout="outSubMenu()">Notes</div></li>
+		    				<li><div style="border:1px solid #bbbbbb" onmouseover="inSubMenu()" onmouseout="outSubMenu()">Travaux</div></li>
+		    				<li><div style="border:1px solid #bbbbbb" onmouseover="inSubMenu()" onmouseout="outSubMenu()">Divers</div></li>
+		    			</ul>
+	    			</div>
+	    			
+    			</div>
+    		</div>
+    	</div>
+    
+    	<div id="example3" class="exampleSection">
+    		<div style="padding-bottom:10px;">
+    			Exemple 3 : <a href="javascript:void(0)" onclick="animateExample3()">Animer</a>
+    		</div>
+    		<img src="images/img1.jpg" id="img1" alt="" class="overlapImage" style="z-index:1;" />
+    		<img src="images/img2.jpg" id="img2" alt="" class="overlapImage" style="z-index:2;display:none;" />
+    		<img src="images/img3.jpg" id="img3" alt="" class="overlapImage" style="z-index:3;display:none;" />
+    		
+    	</div>
+    
+    	<div id="example4" class="exampleSection">
+    		<div style="padding-bottom:10px;">
+    			Exemple 4 : <a href="javascript:void(0)" onclick="animateExample4()">Animer</a>
+    		</div>
+    		<img src="images/img1.jpg" id="ex4_img1" alt="" width="150" style="display:none;" onmouseover="overImg(1)" onmouseout="outImg(1)" />
+    		<img src="images/img2.jpg" id="ex4_img2" alt="" width="150" style="display:none;" onmouseover="overImg(2)" onmouseout="outImg(2)" />
+    		<img src="images/img3.jpg" id="ex4_img3" alt="" width="150" style="display:none;" onmouseover="overImg(3)" onmouseout="outImg(3)" />
+    		
+    	</div>
+    	
+		<div id="example5" class="exampleSection">
+    		<div style="padding-bottom:10px;">
+    			Exemple 5 : <a href="javascript:void(0)" onclick="animateExample5()">Animer</a>
+    		</div>
+			
+			<div id="containerExample5" style="position:relative;"></div>
+		</div>
+		
+    </body>
+</html>

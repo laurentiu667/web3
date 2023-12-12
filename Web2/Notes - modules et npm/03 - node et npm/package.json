@@ -1,0 +1,15 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "Permet d’exécuter du JavaScript sans navigateur.",
+  "main": "app.mjs",
+  "scripts": {
+    "version": "node --version",
+    "patate": "echo 'salut'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}

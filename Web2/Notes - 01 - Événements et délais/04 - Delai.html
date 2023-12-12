@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Délai d'exécution</title>
+		<meta charset="utf-8"/>
+		<script>
+			const afficher = () => {
+				alert("BOO !");
+			}
+
+			let id = setTimeout(afficher, 2000);
+			clearTimeout(id);
+
+			let id2 = setInterval(() => {
+				console.log("tick");
+			}, 500)
+			clearInterval(id2);
+
+			let posX = 0;
+			// Fonction qui bouge un peu le div,
+			// et qui se rappelle lui-même dans 30msec
+			const move = () => {
+				let node = document.querySelector("div");
+				posX++;
+				node.style.left = posX + "px";
+				setTimeout(move, 20);
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eius rem illo quidem quod placeat quas tenetur veniam! Repellendus hic, quisquam architecto rerum iusto ab alias explicabo sapiente porro dolorem?
+		</p>
+		<div style="position:absolute;top:40px;background-color: brown;" onclick="move()">Bouge-moi</div>
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, numquam expedita commodi nisi officia optio libero temporibus excepturi perspiciatis dolorem repudiandae magni velit iste odit cumque neque! Vel, ab quo.
+		</p>
+	</body>
+</html>

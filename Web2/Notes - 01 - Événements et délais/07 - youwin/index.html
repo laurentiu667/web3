@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>You win!</title>
+        <link rel="stylesheet" href="css/global.css">
+        <style>
+            div {
+                font-size: 80px;
+                background-color: green;
+                color:red;
+                width: 500px;
+                padding:20px;
+                left: 500px;
+                margin-left: -250px;
+                text-align: center;
+                position: fixed;
+                top:-100px;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", () => {
+                let winNode = document.querySelector("div");
+                let posY = -100;
+
+                winNode.onmouseover = () => {
+                    winNode.style.left = Math.random() * window.innerWidth + "px";
+                    posY = Math.random() * 100;
+                }
+                const SPEED = 2;
+                let counter = 0;
+                let greenState = true;
+
+                const goDown = () => {
+                    counter++;
+                    winNode.style.transform = "rotate(" + counter + "deg)";
+                    console.log(winNode.offsetTop)
+                    if (posY < 250) {
+                        posY += SPEED;
+                    }
+
+                    if (counter > 25) {
+                        counter = 0;
+                        greenState = !greenState;
+                        // switch la couleur
+
+                        winNode.style.color = greenState ? "green" : "red";
+                        winNode.style.backgroundColor = greenState ? "red" : "green";
+                    }
+
+                    winNode.style.top = posY + "px";
+                    setTimeout(goDown, 30); 
+                }
+
+                goDown();
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            YOU WIN!
+        </div>
+        <main>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere totam amet reiciendis, laudantium quae asperiores eos recusandae sed voluptatem magni, repellat laboriosam quidem mollitia obcaecati voluptates? Cumque, earum ex.
+            </p>
+        </main>
+    </body>
+</html>

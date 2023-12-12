@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les tableaux</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			let tableau2 = new Array();
+			let tableau = [];
+			tableau[0] = "Marty";
+			tableau[1] = "McFly";
+
+			for (let i = 0; i < tableau.length; i++) {
+				let element = tableau[i];
+				console.log(element);
+			}
+
+			tableau.forEach(element => {
+				console.log(element);
+			})
+
+			tableau.push("Doc");	// Ajouter à la fin
+			tableau.pop();			// Retrait du dernier élément
+			tableau.unshift("Brown");// Ajout au début
+			tableau.shift();		// Retrait du premier élément
+			tableau.splice(1, 1, "Biff");	// va à l'index 1, enlève 1, 
+
+
+		</script>
+	</body>
+</html>

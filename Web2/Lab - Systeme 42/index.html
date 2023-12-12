@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enregistrement | Système 42</title>
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <main>
+            <div class="box">
+                <h1>Enregistrement</h1>
+                <form action="index.html" method="post">
+                    <div class="box-content">
+                        <div>
+                            <div>
+                                Nom :
+                            </div>
+                            <div>
+                                <input type="text" name="name" placeholder="Nom complet">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Date de naissance :
+                            </div>
+                            <div>
+                                <input type="date" name="date">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Courriel :
+                            </div>
+                            <div>
+                                <input type="email" name="email">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Genre :
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="gender" value="M"> Homme
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="W"> Femme
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="ND"> Non-binaire
+                                </label>                                
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Mot de passe :
+                            </div>
+                            <div>
+                                <input type="password" name="password">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Connaissez-vous la signification du nombre 42?
+                            </div>
+                            <div>
+                                <select name="knowledgeOf42">
+                                    <option>Oui</option>
+                                    <option>Non</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <textarea name="comments" placeholder="Commentaire divers..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">S'enregistrer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/global.css">
+		<script src="js/javascript.js"></script>
+		<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+        <title>Système solaire</title>
+    </head>
+    <body>
+        <div class="builder">
+            <input type="color" name="spaceColor" id="sColor">
+            <button class="add-star" type="button">+ étoile</button>
+            <button class="add-planet"type="button">+ planète</button>
+        </div>
+        <div class="space">
+            <div class="ui-comp sun"></div>
+        </div>
+        <footer>
+			<div>
+				<h1>Créateur d'un système solaire (<a href="img/exemple.png">voir exemple</a>)</h1>
+				<div>
+                    <p style="margin-bottom:5px">Dans cet exercice de révision, l'idée est de se pratiquer avec le DOM et les événements en JavaScript. Notez qu'il n'y a pas vraiment d'animation dans cet exercice.</p>
+                    <p>Ajouter le code javascript afin que :</p>
+					<ul>
+						<li>Lorsque l'usager change la couleur du champ <code>#sColor</code>, alors celle-ci devient la couleur de fond de <code>.space</code>.</li>
+						<li>Lorsque l'usager clique sur le bouton <code>+ étoile</code>, alors une nouvelle étoile est créée et placée aléatoirement dans <code>.space</code>. Ajoutez-y les classes CSS <code>ui-comp</code> et <code>star</code> pour vous aider à la placer.</li>
+						<li>Lorsque l'usager passe son curseur sur une étoile, alors celle-ci est supprimée.</li>
+						<li>Lorsque l'usager clique sur le bouton <code>+ planète</code>, alors une nouvelle planète est créée et placée aléatoirement dans <code>.space</code>. Ajoutez-y la classe <code>ui-comp</code> pour vous aider à la placer, puis ajoutez-y un <code>background-image</code> aléatoire parmi les 5 images de planète du dossier img.</li>
+                        <li>Lorsque l'usager clique sur une planète, alors celle-ci est supprimée.</li>
+                        <li>Lorsque l'usager appuie sur la touche <code>Escape</code> dans la page Web (le document), alors la page est rafraîchie.</li>
+                        <li>Si l'on clique sur le soleil, alors après 2 secondes, toutes les étoiles disparaissent (mais les planètes restent).</li>
+                        <li>Si vous voulez y ajouter un aspect animation, faites en sorte que chaque élément créé peut se promener dans la page Web et est retiré lorsqu'il dépasse les bordures du navigateur.</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+    </body>
+</html>

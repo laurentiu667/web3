@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Recherche</title>
+        <meta charset="utf-8" />
+		<link href="css/global.css" rel="stylesheet" />
+		<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+	</head>
+	<body>
+		<div>
+			<script>
+				const validate = () => {
+					let errors = [];
+					let value = document.getElementById("box").value;
+
+					if (value.length == 0) {
+						errors.push("Champ ne peut être vide");
+					}
+
+					if (value == "Mots clés") {
+						errors.push("Champ ne peut être 'Mots clés'");
+					}
+
+					return errors.length == 0;
+				}
+			</script>
+			<form action="" method="get" onsubmit="return validate()">
+				<div class="search-line">
+					<div class="form-left">
+						<input type="text" id="box" name="searchBox" value="Mots clés" />
+					</div>
+					<div class="form-right">
+						<input type="image" src="images/search-btn.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+		<footer>
+			<div>
+				<h3>Validation d'un formulaire simple</h3>
+				<ul>
+					<li>
+						Ajouter la logique permettant de valider le formulaire suivant. <br><br>Il faut permettre l'envoi du formulaire SEULEMENT lorsque :
+						<ol>
+							<li>
+								La valeur du champ <code>searchBox</code> n'est pas vide
+							</li>
+							<li>
+								La valeur du champ <code>searchBox</code> n'est pas "Mots clés"
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+#calendar-container {
+	margin:2vh auto;
+	width:40vw;
+	height:50vh;
+}

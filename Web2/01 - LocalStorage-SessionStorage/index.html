@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>localStorage et sessionStorage</title>
+		<meta charset="utf-8">
+		<link href="css/global.css" rel="stylesheet" />
+		<script>
+			const chooseShip = no => {
+				localStorage.setItem("shipNo", no);
+				// égal à : 
+				localStorage["shipNo"] = no;
+				// Toujours sauvegardé en string
+				window.location.href = "game.html";
+			}
+
+		</script>
+</head>
+<body>
+	<div class="container">
+		<h1>
+			Choisissez votre vaisseau
+		</h1>
+		<div class="box-section">
+			<div class="success box">Vaisseau sauvegardé</div>
+		</div>
+
+		<div class="ships-container">
+			<div onclick="chooseShip(1)">
+				<img src="images/spaceship1.png" alt="ship1" height="150" >
+			</div>
+			<div onclick="chooseShip(2)">
+				<img src="images/spaceship2.png" alt="ship2" height="150" >
+			</div>
+			<div onclick="chooseShip(3)">
+				<img src="images/spaceship3.png" alt="ship3" height="150" >
+			</div>
+		</div>
+	</div>
+</body>
+</html>

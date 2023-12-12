@@ -1,0 +1,7 @@
+[branch]
+	autosetuprebase = always
+[user]
+	name = Frédéric Thériault
+	email = fred.theriault@gmail.com
+[core]
+	autocrlf = true

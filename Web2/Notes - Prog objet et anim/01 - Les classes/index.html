@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les classes (programmation objet)</title>
+</head>
+<body>
+    <script>
+        let tab = [1, 4, 2];
+        let dict = {
+            "no1" : "sadfsfd",
+            "no2" : "sadfdjhsfd",
+        }
+        console.log(dict["no1"]);
+        // JSON ( [], {})
+        // {} = dictionnaire ou objet
+        let user = {
+            "firstName" : "John",
+            "lastName" : "Smith",
+            "toString" :  function () { // scope de : this
+                // this = moi-même...
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        console.log(user.firstName);
+        console.log(user.toString());
+
+        class Person {
+            
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+
+                // let node = document.querySelector("div");
+                // node.onclick = function () {
+                //     this.
+                // }
+            }
+
+            afficher() {
+                console.log(this.firstName, this.lastName);
+            }
+        }
+
+        let p = new Person("Jane", "Doe");
+        p.afficher();
+
+    </script>
+</body>
+</html>

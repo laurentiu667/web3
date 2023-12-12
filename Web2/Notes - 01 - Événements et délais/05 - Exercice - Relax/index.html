@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON'T PANIC</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script defer src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            for (let i = 1; i <= 3; i++) {
+                setTimeout(() => {
+                    document.querySelector("#elem-" + i).style.opacity = 1;
+                }, 2000 * i);
+            }
+        })
+    </script>
+</head>
+<body>
+    <main>
+        <div id="elem-1">
+            <img src="img/thumb.png" alt="Thumb logo">
+        </div>
+        <div id="elem-2">
+            Don't
+        </div>
+        <div id="elem-3">
+            Panic
+        </div>
+        <footer>
+            <div>
+                <h3>Affichage en 3 temps</h3>
+                <p>L'objectif est de simplement faire afficher les 3 <code>div</code>, un à la fois, à chaque 2 secondes.</p>
+                <p>Pour y parvenir:</p>
+                <ol>
+                    <li>
+                        Mettre l'opacité des <code>div</code> à zéro directement dans le CSS.
+                    </li>
+                    <li>
+                        Faire un premier délai, qui permet de changer l'opacité (de la mettre à 1), après 2 secondes.
+                    </li>
+                    <li>
+                        Faire un deuxième délai, puis un troisième pour les 2 autres éléments
+                    </li>
+                </ol>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

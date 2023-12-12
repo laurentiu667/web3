@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frank Dion - Accueil</title>
+        <link rel="stylesheet" href="css/global.css">
+		<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
+        <script>
+            const validate = () => {
+                let nameNode = document.querySelector("#name");
+                let passwordNode = document.querySelector("#password");
+                let errors = [];
+
+                if (nameNode.value != "franck") {
+                    errors.push("Nom invalide");
+                }
+
+                if (passwordNode.value != "dion") {
+                    errors.push("Mot de passe invalide");
+                }
+
+                if (errors.length > 0) {
+                    nameNode.value = "";
+                    passwordNode.value = "";
+
+                    let msg = "Vous avez ces erreurs : ";
+
+                    errors.forEach(err => {
+                        msg += "\n - " + err;
+                    })
+
+                    alert(msg);
+                }
+
+                return errors.length == 0;
+            }
+        </script>
+    </head>
+    <body>
+
+        <div>
+            <div class="text-center">
+                <img src="img/mouettes_index.gif" height="500" alt="mouettes">
+            </div>
+            <form action="film.html" method="post" onsubmit="return validate()">
+                <div class="bordered-black index-form">
+                    <div class="form-line">
+                        <div class="form-label">
+                            Nom :
+                        </div>
+                        <div class="form-input">
+                            <input type="text" name="name" id="name">
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-label">
+                            Mot de passe :
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    <div class="text-center form-button">
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
